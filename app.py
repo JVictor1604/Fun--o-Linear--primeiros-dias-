@@ -73,7 +73,8 @@ def pagina_explicacao():
     st.markdown("Uma função linear descreve uma relação de crescimento ou decrescimento **constante**. Sua principal característica é que o gráfico resultante é sempre uma **linha reta**.")
     st.markdown("---")
 
-    with st.expander("🤔 Conceito de Função"):
+    # --- CORREÇÃO APLICADA: st.expander trocado por st.checkbox ---
+    if st.checkbox("Ver Conceito de Função"):
         st.write("""
         Uma função é uma regra matemática que estabelece uma relação entre dois conjuntos de valores. 
         Para cada valor de **entrada (variável independente)**, a função associa um único valor de **saída (variável dependente)**.
@@ -123,8 +124,6 @@ def pagina_explicacao():
 
     with exp_col2:
         x_exp = np.linspace(-10, 10, 400)
-        # --- CÁLCULO CORRIGIDO ---
-        # A forma correta de calcular a potência, que funciona para parábolas (x^2)
         y_exp = 2 * (x_exp**expoente) - 1
         
         fig_exp = go.Figure()
@@ -381,7 +380,8 @@ def jogo_desafio_raiz():
             st.rerun()
         
         if st.session_state.raiz_answered:
-            with st.expander("Ver cálculo da raiz"):
+            # --- CORREÇÃO APLICADA: st.expander trocado por st.checkbox ---
+            if st.checkbox("Ver cálculo da raiz"):
                 st.markdown(f"""
                 Para encontrar a raiz, igualamos a função a zero:
                 1. `f(x) = 0`
