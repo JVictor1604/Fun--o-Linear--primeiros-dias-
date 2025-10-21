@@ -73,7 +73,7 @@ def pagina_explicacao():
     st.markdown("Uma função linear descreve uma relação de crescimento ou decrescimento **constante**. Sua principal característica é que o gráfico resultante é sempre uma **linha reta**.")
     st.markdown("---")
 
-    with st.expander("🤔 Conceito de Função (Clique para expandir)"):
+    with st.expander("🤔 Conceito de Função"):
         st.write("""
         Uma função é uma regra matemática que estabelece uma relação entre dois conjuntos de valores. 
         Para cada valor de **entrada (variável independente)**, a função associa um único valor de **saída (variável dependente)**.
