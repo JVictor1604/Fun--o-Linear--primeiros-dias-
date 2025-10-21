@@ -123,8 +123,9 @@ def pagina_explicacao():
 
     with exp_col2:
         x_exp = np.linspace(-10, 10, 400)
-        # Lógica ajustada para lidar com expoentes não inteiros e bases negativas
-        y_exp = 2 * (np.power(np.abs(x_exp), expoente) * np.sign(x_exp)) - 1
+        # --- CÁLCULO CORRIGIDO ---
+        # A forma correta de calcular a potência, que funciona para parábolas (x^2)
+        y_exp = 2 * (x_exp**expoente) - 1
         
         fig_exp = go.Figure()
         fig_exp.add_trace(go.Scatter(x=x_exp, y=y_exp, mode='lines', name='Gráfico', line=dict(color='orange', width=4)))
