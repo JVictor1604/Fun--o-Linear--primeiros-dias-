@@ -116,9 +116,9 @@ def pagina_explicacao():
 
     exp_col1, exp_col2 = st.columns([1,2])
     with exp_col1:
-        expoente = st.slider("Altere o expoente de x", 1.0, 3.0, 1.0, 0.1, key="expoente_slider")
-        st.latex(f"f(x) = 2x^{{{expoente:.1f}}} - 1")
-        st.write("Observe que, quando o expoente é 1.0, o gráfico é uma reta. Ao mudar o valor, ele se torna uma curva.")
+        expoente = st.slider("Altere o expoente de x", 1, 4, 1, key="expoente_slider")
+        st.latex(f"f(x) = 2x^{{{expoente}}} - 1")
+        st.write("Observe que, quando o expoente é 1, o gráfico é uma reta. Ao mudar o valor, ele se torna uma curva.")
 
 
     with exp_col2:
